@@ -1,5 +1,7 @@
 package com.xcape.rsv_admin.domain.dto;
 
+import com.xcape.rsv_admin.controller.request.ThemeCreateRequest;
+import com.xcape.rsv_admin.controller.request.ThemeModifyRequest;
 import com.xcape.rsv_admin.domain.entity.Theme;
 import lombok.*;
 
@@ -34,5 +36,36 @@ public class ThemeDto {
 
     public static ThemeDto fromEntity(Theme entity) {
         return new ThemeDto(entity.getId(), entity.getMerchant().getId(), entity.getName(), entity.getMainImage(), entity.getBgImage(), entity.getPrice(), entity.getDesc(), entity.getReasoning(), entity.getObservation(), entity.getActivity(), entity.getTeamwork(), entity.getMinPersonnel(), entity.getMaxPersonnel(), entity.getDifficulty(), entity.getGenre(), entity.getPoint(), entity.getYoutubeLink(), entity.getColorCode(), entity.getHasXKit(), entity.getIsCrimeScene());
+    }
+
+    public static ThemeDto fromModifyRequest(ThemeModifyRequest request) {
+        return new ThemeDto(request.getName(), request.getMainImage(), request.getBgImage(), request.getPrice(), request.getDesc(), request.getReasoning(), request.getObservation(), request.getActivity(), request.getTeamwork(), request.getMinPersonnel(), request.getMaxPersonnel(), request.getDifficulty(), request.getGenre(), request.getPoint(), request.getYoutubeLink(), request.getColorCode(), request.getHasXKit(), request.getIsCrimeScene());
+    }
+
+    public static ThemeDto fromCreateRequest(ThemeCreateRequest request) {
+        return new ThemeDto(request.getName(), request.getMainImage(), request.getBgImage(), request.getPrice(), request.getDesc(), request.getReasoning(), request.getObservation(), request.getActivity(), request.getTeamwork(), request.getMinPersonnel(), request.getMaxPersonnel(), request.getDifficulty(), request.getGenre(), request.getPoint(), request.getYoutubeLink(), request.getColorCode(), request.getHasXKit(), request.getIsCrimeScene());
+    }
+
+
+
+    public ThemeDto(String name, String mainImage, String bgImage, Long price, String desc, Integer reasoning, Integer observation, Integer activity, Integer teamwork, Integer minPersonnel, Integer maxPersonnel, Integer difficulty, String genre, String point, String youtubeLink, String colorCode, Boolean hasXKit, Boolean isCrimeScene) {
+        this.name = name;
+        this.mainImage = mainImage;
+        this.bgImage = bgImage;
+        this.price = price;
+        this.desc = desc;
+        this.reasoning = reasoning;
+        this.observation = observation;
+        this.activity = activity;
+        this.teamwork = teamwork;
+        this.minPersonnel = minPersonnel;
+        this.maxPersonnel = maxPersonnel;
+        this.difficulty = difficulty;
+        this.genre = genre;
+        this.point = point;
+        this.youtubeLink = youtubeLink;
+        this.colorCode = colorCode;
+        this.hasXKit = hasXKit;
+        this.isCrimeScene = isCrimeScene;
     }
 }

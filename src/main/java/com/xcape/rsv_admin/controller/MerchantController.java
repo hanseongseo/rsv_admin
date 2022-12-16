@@ -17,7 +17,7 @@ public class MerchantController {
 
     private final MerchantService merchantService;
 
-    @GetMapping("/merchants/")
+    @GetMapping("/merchants")
     public Response<List<MerchantResponse>> getMerchants(Admin admin) {
         try {
             List<MerchantResponse> merchantResponseList = merchantService.getMerchantsByAdmin(admin).stream().map(MerchantResponse::fromDto).toList();

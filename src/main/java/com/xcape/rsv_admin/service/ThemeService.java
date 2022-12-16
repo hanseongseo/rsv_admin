@@ -32,12 +32,38 @@ public class ThemeService {
     }
 
     @Transactional
-    public void createThemeByMerchantId(Long merchantId, ThemeDto themeDto) {
-        themeDto.setMerchantId(merchantId);
-        themeRepository.save(fromDto(themeDto));
+    public void createThemeByMerchantId(Long merchantId, ThemeDto dto) {
+        dto.setMerchantId(merchantId);
+        themeRepository.save(toEntity(dto));
     }
+
+    @Transactional
+    public ThemeDto getThemeByThemeId(Long themeId) {
+        //  검증
+        Optional<Theme> optional = themeRepository.findById(themeId);
+        assert optional.isPresent();
+
+        return ThemeDto.fromEntity(optional.get());
+    }
+
+    @Transactional
+    public void deleteThemeById(Long themeId) {
+        //  검증
+        assert themeRepository.findById(themeId).isPresent();
+
+        themeRepository.deleteById(themeId);
+    }
+
+    @Transactional
+    public void modifyThemeById(Long themeId, ThemeDto dto) {
+        //  검증
+        assert themeRepository.findById(themeId).isPresent();
+
+        themeRepository.modifyThemeById(themeId, dto.getName(), dto.getMainImage(), dto.getBgImage(), dto.getPrice(), dto.getDesc(), dto.getReasoning(), dto.getObservation(), dto.getActivity(), dto.getTeamwork(), dto.getMinPersonnel(), dto.getMaxPersonnel(), dto.getDifficulty(), dto.getGenre(), dto.getPoint(), dto.getYoutubeLink(), dto.getColorCode(), dto.getHasXKit(), dto.getIsCrimeScene());
+    }
+
     //  merchantId 에 해당하는 merchant 가 없을 시 AssertionError 발생
-    public Theme fromDto(ThemeDto dto) {
+    private Theme toEntity(ThemeDto dto) {
         assert merchantRepository.findById(dto.getMerchantId()).isPresent();
         return Theme.of(
                 merchantRepository.findById(dto.getMerchantId()).get(),
@@ -60,13 +86,5 @@ public class ThemeService {
                 dto.getHasXKit(),
                 dto.getIsCrimeScene()
         );
-    }
-
-    @Transactional
-    public ThemeDto getThemeByThemeId(Long themeId) {
-        Optional<Theme> optional = themeRepository.findById(themeId);
-        assert optional.isPresent();
-
-        return ThemeDto.fromEntity(optional.get());
     }
 }
