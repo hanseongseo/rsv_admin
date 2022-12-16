@@ -59,7 +59,7 @@ public class ThemeService {
         //  검증
         assert themeRepository.findById(themeId).isPresent();
 
-        themeRepository.modifyThemeById(themeId, dto.getName(), dto.getMainImage(), dto.getBgImage(), dto.getPrice(), dto.getDesc(), dto.getReasoning(), dto.getObservation(), dto.getActivity(), dto.getTeamwork(), dto.getMinPersonnel(), dto.getMaxPersonnel(), dto.getDifficulty(), dto.getGenre(), dto.getPoint(), dto.getYoutubeLink(), dto.getColorCode(), dto.getHasXKit(), dto.getIsCrimeScene());
+        themeRepository.modifyThemeById(themeId, dto.getName(), dto.getMainImage(), dto.getBgImage(), dto.getPrice(), dto.getDescription(), dto.getReasoning(), dto.getObservation(), dto.getActivity(), dto.getTeamwork(), dto.getMinPersonnel(), dto.getMaxPersonnel(), dto.getDifficulty(), dto.getGenre(), dto.getPoint(), dto.getYoutubeLink(), dto.getColorCode(), dto.getHasXKit(), dto.getIsCrimeScene());
     }
 
     //  merchantId 에 해당하는 merchant 가 없을 시 AssertionError 발생
@@ -71,7 +71,7 @@ public class ThemeService {
                 dto.getMainImage(),
                 dto.getBgImage(),
                 dto.getPrice(),
-                dto.getDesc(),
+                dto.getDescription(),
                 dto.getReasoning(),
                 dto.getObservation(),
                 dto.getActivity(),

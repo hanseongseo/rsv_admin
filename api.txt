@@ -1,0 +1,367 @@
+모든 지점 조회 : GET "/merchants"
+    Request : {security}
+    Response :
+        ex)
+        {
+            "resultCode": "SUCCESS",
+            "result": [
+                {
+                    "id": 1,
+                    "userId": 1,
+                    "name": "강남-엑스케이프",
+                    "address": "address",
+                    "themeResponseList": [
+                        {
+                            "id": 1,
+                            "merchantId": 1,
+                            "name": "theme1",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        },
+                        {
+                            "id": 2,
+                            "merchantId": 1,
+                            "name": "theme2",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 20000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 2,
+                            "activity": 5,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "userId": 1,
+                    "name": "수원-엑스케이프",
+                    "address": "address",
+                    "themeResponseList": [
+                        {
+                            "id": 3,
+                            "merchantId": 2,
+                            "name": "theme3",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        },
+                        {
+                            "id": 4,
+                            "merchantId": 2,
+                            "name": "theme4",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "userId": 2,
+                    "name": "홍대-엑스케이프",
+                    "address": "address",
+                    "themeResponseList": [
+                        {
+                            "id": 5,
+                            "merchantId": 3,
+                            "name": "theme5",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        },
+                        {
+                            "id": 6,
+                            "merchantId": 3,
+                            "name": "theme6",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "userId": 2,
+                    "name": "건대-엑스케이프",
+                    "address": "address",
+                    "themeResponseList": [
+                        {
+                            "id": 7,
+                            "merchantId": 4,
+                            "name": "theme7",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        },
+                        {
+                            "id": 8,
+                            "merchantId": 4,
+                            "name": "theme8",
+                            "mainImage": "mainImage.jpg",
+                            "bgImage": "bgimage.jpg",
+                            "price": 10000,
+                            "description": "description",
+                            "reasoning": 3,
+                            "observation": 3,
+                            "activity": 3,
+                            "teamwork": 3,
+                            "minPersonnel": 3,
+                            "maxPersonnel": 5,
+                            "difficulty": 3,
+                            "genre": "스릴러",
+                            "point": "포인트",
+                            "youtubeLink": "youtube.html",
+                            "colorCode": "000000",
+                            "hasXKit": false,
+                            "isCrimeScene": false
+                        }
+                    ]
+                }
+            ]
+        }
+
+지점 조회 : GET "/merchants/{merchantId}"
+    Request : {security}
+    Response :
+        ex)
+        {
+            "resultCode": "SUCCESS",
+            "result": {
+                "id": 1,
+                "adminId": 1,
+                "name": "강남-엑스케이프",
+                "address": "address",
+                "themeResponseList": [
+                    {
+                        "id": 1,
+                        "merchantId": 1,
+                        "name": "theme1",
+                        "mainImage": "mainImage.jpg",
+                        "bgImage": "bgimage.jpg",
+                        "price": 10000,
+                        "description": "description",
+                        "reasoning": 3,
+                        "observation": 3,
+                        "activity": 3,
+                        "teamwork": 3,
+                        "minPersonnel": 3,
+                        "maxPersonnel": 5,
+                        "difficulty": 3,
+                        "genre": "스릴러",
+                        "point": "포인트",
+                        "youtubeLink": "youtube.html",
+                        "colorCode": "000000",
+                        "hasXKit": false,
+                        "isCrimeScene": false
+                    },
+                    {
+                        "id": 2,
+                        "merchantId": 1,
+                        "name": "theme2",
+                        "mainImage": "mainImage.jpg",
+                        "bgImage": "bgimage.jpg",
+                        "price": 20000,
+                        "description": "description",
+                        "reasoning": 3,
+                        "observation": 2,
+                        "activity": 5,
+                        "teamwork": 3,
+                        "minPersonnel": 3,
+                        "maxPersonnel": 5,
+                        "difficulty": 3,
+                        "genre": "스릴러",
+                        "point": "포인트",
+                        "youtubeLink": "youtube.html",
+                        "colorCode": "000000",
+                        "hasXKit": false,
+                        "isCrimeScene": false
+                    }
+                ]
+            }
+        }
+
+테마 생성 : POST "/merchants/{merchantId}/themes"
+    Request :
+        {
+            "name": "테마 이름",
+            "mainImage": "메인이미지 경로",
+            "bgImage": "배경이미지 경로",
+            "price": 가격(integer),
+            "description": "설명",
+            "reasoning": 추리력(integer),
+            "observation": 관찰력(integer),
+            "activity": 활동성(integer),
+            "teamwork": 팀워크(integer),
+            "minPersonnel": 최소인원(integer),
+            "maxPersonnel": 최대인원(integer),
+            "difficulty": 난이도(integer),
+            "genre": "장르",
+            "point": "포인트",
+            "youtubeLink": "유튜브 링크",
+            "colorCode": 색상 코드(integer),
+            "hasXKit": X-Kit 여부(true / false),
+            "isCrimeScene": Crime scene 여부(true / false)
+        }
+
+    Response :
+        {
+            "resultCode": "SUCCESS",
+            "result": null
+        }
+
+테마 조회 : GET "/themes/{themeId}"
+    Request : {security}
+
+    Response :
+        ex)
+        {
+            "resultCode": "SUCCESS",
+            "result": {
+                "id": 1,
+                "merchantId": 1,
+                "name": "theme1",
+                "mainImage": "mainImage.jpg",
+                "bgImage": "bgimage.jpg",
+                "price": 10000,
+                "description": "description",
+                "reasoning": 3,
+                "observation": 3,
+                "activity": 3,
+                "teamwork": 3,
+                "minPersonnel": 3,
+                "maxPersonnel": 5,
+                "difficulty": 3,
+                "genre": "스릴러",
+                "point": "포인트",
+                "youtubeLink": "youtube.html",
+                "colorCode": "000000",
+                "hasXKit": false,
+                "isCrimeScene": false
+            }
+        }
+
+테마 수정 : PUT "/themes/{themeId}"
+    Request :
+        {security},
+        {
+            "name": "테마 이름",
+            "mainImage": "메인이미지 경로",
+            "bgImage": "배경이미지 경로",
+            "price": 가격(integer),
+            "description": "설명",
+            "reasoning": 추리력(integer),
+            "observation": 관찰력(integer),
+            "activity": 활동성(integer),
+            "teamwork": 팀워크(integer),
+            "minPersonnel": 최소인원(integer),
+            "maxPersonnel": 최대인원(integer),
+            "difficulty": 난이도(integer),
+            "genre": "장르",
+            "point": "포인트",
+            "youtubeLink": "유튜브 링크",
+            "colorCode": 색상 코드(integer),
+            "hasXKit": X-Kit 여부(true / false),
+            "isCrimeScene": Crime scene 여부(true / false)
+        }
+
+    Response :
+        {
+            "resultCode": "SUCCESS",
+            "result": null
+        }

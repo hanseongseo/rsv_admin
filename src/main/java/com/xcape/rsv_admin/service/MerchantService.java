@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
@@ -25,6 +26,24 @@ public class MerchantService {
     @Transactional
     public List<MerchantDto> getMerchantsByAdmin(Admin admin) {
         List<Merchant> merchantByUserId = merchantRepository.findMerchantsByAdmin(admin);
+
+        return merchantByUserId.stream()
+                .map(this::merchantToDto)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public MerchantDto getMerchant(Long merchantId) {
+        Optional<Merchant> optional = merchantRepository.findById(merchantId);
+        assert optional.isPresent();
+
+        return merchantToDto(optional.get());
+    }
+
+    //  테스트용
+    @Transactional
+    public List<MerchantDto> getAllMerchants() {
+        List<Merchant> merchantByUserId = merchantRepository.findAll();
 
         return merchantByUserId.stream()
                 .map(this::merchantToDto)

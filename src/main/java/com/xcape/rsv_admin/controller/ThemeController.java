@@ -2,6 +2,7 @@ package com.xcape.rsv_admin.controller;
 
 import com.xcape.rsv_admin.controller.request.ThemeCreateRequest;
 import com.xcape.rsv_admin.controller.request.ThemeModifyRequest;
+import com.xcape.rsv_admin.controller.response.ErrorCode;
 import com.xcape.rsv_admin.controller.response.MerchantResponse;
 import com.xcape.rsv_admin.controller.response.ThemeResponse;
 import com.xcape.rsv_admin.domain.dto.ThemeDto;
@@ -19,17 +20,17 @@ public class ThemeController {
 
     private final ThemeService themeService;
 
-    @GetMapping("/merchants/{merchantId}")
-    public Response<List<ThemeResponse>> getThemesByMerchant(Admin admin, @PathVariable Long merchantId) {
-        List<ThemeResponse> themeResponseList = themeService.getThemesByMerchantId(admin, merchantId).stream().map(ThemeResponse::fromDto).toList();
-        return Response.success(themeResponseList);
-    }
+
 
     @PostMapping("/merchants/{merchantId}/themes")
     public Response<Void> createThemeByMerchantId(@PathVariable Long merchantId, @RequestBody ThemeCreateRequest request) {
-        ThemeDto dto = ThemeDto.fromCreateRequest(request);
-        themeService.createThemeByMerchantId(merchantId, dto);
-        return Response.success();
+        try {
+            ThemeDto dto = ThemeDto.fromCreateRequest(request);
+            themeService.createThemeByMerchantId(merchantId, dto);
+            return Response.success();
+        } catch (Exception e) {
+            return Response.error(ErrorCode.INVALID_PERMISSION);
+        }
     }
 
     @GetMapping("/themes/{themeId}")

@@ -12,7 +12,7 @@ public class ThemeModifyRequest {
     private String mainImage;
     private String bgImage;
     private Long price;
-    private String desc;
+    private String description;
     private Integer reasoning;
     private Integer observation;
     private Integer activity;
@@ -27,26 +27,4 @@ public class ThemeModifyRequest {
     private Boolean hasXKit;
     private Boolean isCrimeScene;
 
-    public static ThemeDto toDto(ThemeModifyRequest request) {
-        return new ThemeDto(
-                request.getName(),
-                request.getMainImage(),
-                request.getBgImage(),
-                request.getPrice(),
-                request.getDesc(),
-                request.getReasoning(),
-                request.getObservation(),
-                request.getActivity(),
-                request.getTeamwork(),
-                request.getMinPersonnel(),
-                request.getMaxPersonnel(),
-                request.getDifficulty(),
-                request.getGenre(),
-                request.getPoint(),
-                request.getYoutubeLink(),
-                request.getColorCode(),
-                request.getHasXKit(),
-                request.getIsCrimeScene()
-        );
-    }
 }

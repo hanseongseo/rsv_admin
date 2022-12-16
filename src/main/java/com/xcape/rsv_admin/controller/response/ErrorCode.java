@@ -7,9 +7,8 @@ import lombok.Getter;
 @Getter
 public enum ErrorCode {
     INVALID_PERMISSION("Permission is invalid"),
-
-
+    NOT_EXISTENT_DATA("Not existent")
     ;
 
-    private String errorCode;
+    private final String errorCode;
 }

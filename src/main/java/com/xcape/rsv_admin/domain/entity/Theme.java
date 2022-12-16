@@ -14,8 +14,8 @@ import lombok.Setter;
 @Entity
 public class Theme {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Setter
@@ -40,8 +40,8 @@ public class Theme {
     private Long price;
 
     //    소개
-    @Setter @Column(name = "desc", nullable = false)
-    private String desc;
+    @Setter @Column(name = "description", nullable = false)
+    private String description;
 
     //    추리력
     @Setter @Column(name = "reasoning", nullable = false)
@@ -88,15 +88,15 @@ public class Theme {
     private String colorCode;
 
     //    Use x-kit
-    @Setter @Column(name = "xkit", nullable = false)
+    @Setter @Column(name = "has_x_kit", nullable = false)
     private Boolean hasXKit;
 
     //    크라임씬(y/n)
-    @Setter @Column(name = "crimescene", nullable = false)
+    @Setter @Column(name = "is_crime_scene", nullable = false)
     private Boolean isCrimeScene;
 
     //    id 제외 모든 파라미터 받는 생성자
-    private Theme(Merchant merchant, String name, String mainImage, String bgImage, Long price, String desc, Integer reasoning, Integer observation, Integer activity, Integer teamwork, Integer minPersonnel, Integer maxPersonnel, Integer difficulty, String genre, String point, String youtubeLink, String colorCode, Boolean hasXKit, Boolean isCrimeScene) {this.merchant = merchant;this.name = name;this.mainImage = mainImage;this.bgImage = bgImage;this.price = price;this.desc = desc;this.reasoning = reasoning;this.observation = observation;this.activity = activity;this.teamwork = teamwork;this.minPersonnel = minPersonnel;this.maxPersonnel = maxPersonnel;this.difficulty = difficulty;this.genre = genre;this.point = point;this.youtubeLink = youtubeLink;this.colorCode = colorCode;this.hasXKit = hasXKit;this.isCrimeScene = isCrimeScene;}
+    private Theme(Merchant merchant, String name, String mainImage, String bgImage, Long price, String description, Integer reasoning, Integer observation, Integer activity, Integer teamwork, Integer minPersonnel, Integer maxPersonnel, Integer difficulty, String genre, String point, String youtubeLink, String colorCode, Boolean hasXKit, Boolean isCrimeScene) {this.merchant = merchant;this.name = name;this.mainImage = mainImage;this.bgImage = bgImage;this.price = price;this.description = description;this.reasoning = reasoning;this.observation = observation;this.activity = activity;this.teamwork = teamwork;this.minPersonnel = minPersonnel;this.maxPersonnel = maxPersonnel;this.difficulty = difficulty;this.genre = genre;this.point = point;this.youtubeLink = youtubeLink;this.colorCode = colorCode;this.hasXKit = hasXKit;this.isCrimeScene = isCrimeScene;}
 
     //    팩토리 메소드
     public static Theme of(Merchant merchant, String name, String mainImage, String bgImage, Long price, String desc, Integer reasoning, Integer observation, Integer activity, Integer teamwork, Integer minPersonnel, Integer maxPersonnel, Integer difficulty, String genre, String point, String youtubeLink, String colorCode, Boolean hasXKit, Boolean isCrimeScene) {

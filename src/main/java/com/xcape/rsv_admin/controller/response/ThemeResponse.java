@@ -14,7 +14,7 @@ public class ThemeResponse {
     private String mainImage;
     private String bgImage;
     private Long price;
-    private String desc;
+    private String description;
     private Integer reasoning;
     private Integer observation;
     private Integer activity;
@@ -37,7 +37,7 @@ public class ThemeResponse {
                 dto.getMainImage(),
                 dto.getBgImage(),
                 dto.getPrice(),
-                dto.getDesc(),
+                dto.getDescription(),
                 dto.getReasoning(),
                 dto.getObservation(),
                 dto.getActivity(),
@@ -53,6 +53,4 @@ public class ThemeResponse {
                 dto.getIsCrimeScene()
         );
     }
-
-
 }

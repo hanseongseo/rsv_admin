@@ -10,8 +10,8 @@ public class Response<T> {
     private String resultCode;
     private T result;
 
-    public static <T>Response<T> error(String errorCode) {
-        return new Response<>(errorCode, null);
+    public static <T>Response<T> error(ErrorCode e) {
+        return new Response<>(e.getErrorCode(), null);
     }
 
     public static Response<Void> success() {

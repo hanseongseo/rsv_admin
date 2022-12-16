@@ -19,7 +19,7 @@ public interface ThemeRepository extends JpaRepository<Theme, Long> {
     @Modifying(clearAutomatically = true)
     @Query(
             "UPDATE Theme set " +
-                    "name = :name, mainImage = :mainImage, bgImage = :bgImage, price = :price, desc = :desc, reasoning = :reasoning, observation = :observation, activity = :activity, teamwork = :teamwork, minPersonnel = :minPersonnel, maxPersonnel = :maxPersonnel, difficulty = :difficulty, genre = :genre, point = :point, youtubeLink = :youtubeLink, colorCode = :colorCode, hasXKit = :hasXKit, isCrimeScene = :isCrimeScene " +
+                    "name = :name, mainImage = :mainImage, bgImage = :bgImage, price = :price, description = :desc, reasoning = :reasoning, observation = :observation, activity = :activity, teamwork = :teamwork, minPersonnel = :minPersonnel, maxPersonnel = :maxPersonnel, difficulty = :difficulty, genre = :genre, point = :point, youtubeLink = :youtubeLink, colorCode = :colorCode, hasXKit = :hasXKit, isCrimeScene = :isCrimeScene " +
                     "where id = :id"
     )
     void modifyThemeById(

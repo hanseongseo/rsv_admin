@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class MerchantResponse {
 
     private Long id;
-    private Long userId;
+    private Long adminId;
     private String name;
     private String address;
 
@@ -24,7 +24,7 @@ public class MerchantResponse {
                 dto.getAdminId(),
                 dto.getName(),
                 dto.getAddress(),
-                dto.getThemeDtoList().stream().map(ThemeResponse::fromDto).collect(Collectors.toList())
+                dto.getThemeDtoList().stream().map(ThemeResponse::fromDto).toList()
         );
     }
 }

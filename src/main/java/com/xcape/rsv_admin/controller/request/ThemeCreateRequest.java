@@ -1,6 +1,5 @@
 package com.xcape.rsv_admin.controller.request;
 
-import com.xcape.rsv_admin.domain.dto.ThemeDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -12,7 +11,7 @@ public class ThemeCreateRequest {
     private String mainImage;
     private String bgImage;
     private Long price;
-    private String desc;
+    private String description;
     private Integer reasoning;
     private Integer observation;
     private Integer activity;
